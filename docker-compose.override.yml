@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+###> doctrine/doctrine-bundle ###
+  database:
+    ports:
+      - "5441:5432"
+###< doctrine/doctrine-bundle ###
+  nginx:
+    ports:
+      - "8083:80"
