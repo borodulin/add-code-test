@@ -49,7 +49,7 @@ class CatalogRepository extends ServiceEntityRepository
             WITH RECURSIVE cte (id, code, name, parent_id, path) AS (
                 SELECT c1.id, c1.code, c1.name, c1.parent_id, ARRAY[c1.id]
                 FROM catalog c1
-                WHERE c1.code = :term OR c1.name ilike :term_mask
+                WHERE c1.code = :term OR c1.name ILIKE :term_mask
                 UNION DISTINCT
                 SELECT c2.id, c2.code, c2.name, c2.parent_id, c2.id || cte.path
                 FROM catalog c2, cte
@@ -62,7 +62,7 @@ class CatalogRepository extends ServiceEntityRepository
 
         $iterator = $this->getEntityManager()->getConnection()->iterateAssociative($sql, [
             'term' => $term,
-            'term_mask' => '%term%',
+            'term_mask' => "%$term%",
         ]);
 
         return $this->populateCatalogs($iterator);
