@@ -6,12 +6,14 @@ namespace App\Service;
 
 use App\Entity\Catalog;
 use App\Form\Data\CatalogData;
+use App\Repository\CatalogRepository;
 use Doctrine\ORM\EntityManagerInterface;
 
 class CatalogService
 {
     public function __construct(
         private readonly EntityManagerInterface $entityManager,
+        private readonly CatalogRepository $catalogRepository,
     ) {
     }
 
@@ -50,7 +52,12 @@ class CatalogService
         return null;
     }
 
-    public function search(?string $term): array
+    public function getRoots(?string $term): array
     {
+        if (null === $term) {
+            return $this->catalogRepository->findAllCatalogs();
+        } else {
+            return $this->catalogRepository->findFilteredCatalogs($term);
+        }
     }
 }

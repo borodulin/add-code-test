@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalogs>
+    <catalog10 code="qwe1" name="qwe1">
+        <catalog2>
+        </catalog2>
+        <catalog6 code="qwe2" name="qwe2">
+            <catalog4 code="qwe" name="qwe">
+            </catalog4>
+            <catalog5 code="qwe" name="qwe">
+            </catalog5>
+        </catalog6>
+        <catalog7 code="qwe" name="qwe">
+            <catalog8 code="qwe" name="qwe">
+            </catalog8>
+            <catalog9 code="qwe" name="qwe">
+            </catalog9>
+        </catalog7>
+    </catalog10>
+    <catalog14 code="qwe" name="qwe">
+        <catalog12 code="qwe" name="qwe">
+        </catalog12>
+        <catalog13 code="qwe" name="qwe">
+        </catalog13>
+    </catalog14>
+    <catalog15 code="qwe" name="qwe">
+        <catalog16 code="qwe" name="qwe">
+            <catalog17 code="qwe" name="qwe">
+                <catalog18 code="qwe" name="qwe">
+                    <catalog19 code="qwe" name="qwe">
+                    </catalog19>
+                </catalog18>
+            </catalog17>
+            <catalog20 code="qwe" name="qwe">
+            </catalog20>
+        </catalog16>
+        <catalog21 code="qwe" name="qwe">
+        </catalog21>
+        <catalog22 code="qwe" name="qwe">
+        </catalog22>
+    </catalog15>
+    <catalog23 code="qwe" name="qwe">
+    </catalog23>
+</catalogs>

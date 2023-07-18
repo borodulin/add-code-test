@@ -25,6 +25,9 @@ class CatalogForm extends AbstractType
             ])
             ->add('parent', EntityType::class, [
                 'class' => Catalog::class,
+                'documentation' => [
+                    'type' => 'integer',
+                ],
             ]);
     }
 
